@@ -1,9 +1,20 @@
+#!/usr/bin/python3
+"""
+Find sum of 2 numbers to match a given number
+"""
+
+
 import random
+MAX = 100
+SAMPLE_SIZE = 10
 
 
 def main():
-    the_list = random.sample(range(100), 10)
-    the_num = random.randint(1, 100)
+    """
+    main driver program
+    """
+    the_list = random.sample(range(MAX), SAMPLE_SIZE)
+    the_num = random.randint(1, MAX)
     print(the_list, the_num)
 
     print(any(the_num - item in the_list for item in the_list))
